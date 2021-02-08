@@ -24,7 +24,7 @@ const geolocationSuccess = async (position) => {
   }
 
   if (skies === "Clear") {
-    document.getElementById("weather__sky").src = "./images/sun.png";
+    document.getElementById("weather__sky").src = "./images/clear.png";
   }
 };
 

@@ -17,7 +17,7 @@ body {
 }
 
 #weather__temp {
-  font-size: 8rem;
+  font-size: 9rem;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
@@ -31,13 +31,13 @@ body {
 }
 
 #weather__sky {
-  max-width: 10rem;
+  max-width: 15rem;
   position: absolute;
   /* margin: 0 auto; */
-  left: 47%;
-  top: 47%;
-  transform: translateX(-47%, -47%);
-  padding-top: 3rem;
+  left: 46%;
+  top: 46%;
+  transform: translateX(-46%, -46%);
+  padding-top: 5rem;
 }
 
 .unit {
@@ -45,6 +45,6 @@ body {
 }
 
 .unit__label {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Roboto", sans-serif;
 }
