@@ -2,19 +2,32 @@
 <html>
   <head>
     <script src="./script.js" async></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Local Weather</title>
   </head>
   <body>
-    <div><p id="temp"></p></div>
-    <div>
-      <input type="radio" id="celcius" name="units" checked /><label
-        for="Celcius"
-        >Celcius</label
-      >
-      <input type="radio" id="fahrenheit" name="units" /><label for="Fahrenheit"
-        >Farenheit</label
-      >
+    <div class="weather-container">
+      <div class="weather">
+        <div><p id="weather__temp"></p></div>
+        <div id="weather__sky-container"><img id="weather__sky" src="" /></div>
+      </div>
+      <div class="unit">
+        <input type="radio" id="celcius" name="units" checked /><label
+          for="Celcius"
+          class="unit__label"
+          >Celcius</label
+        >
+        <input type="radio" id="fahrenheit" name="units" /><label
+          for="Fahrenheit"
+          class="unit__label"
+          >Farenheit</label
+        >
+      </div>
     </div>
-    <div><img id="sky" src="" /></div>
   </body>
 </html>

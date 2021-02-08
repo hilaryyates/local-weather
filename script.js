@@ -5,7 +5,7 @@ const celciusToFahrenheit = (tempC) => {
   return tempF;
 };
 
-const geoSuccess = async (position) => {
+const geolocationSuccess = async (position) => {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const response = await fetch(
@@ -15,24 +15,27 @@ const geoSuccess = async (position) => {
   const responseBody = JSON.parse(responseText);
   console.log(responseBody);
   temp = Math.round(responseBody.main.temp);
-  document.getElementById("temp").innerText = temp;
+  document.getElementById("weather__temp").innerText = temp;
   skies = responseBody.weather[0].main;
+  console.log(skies);
 
   if (skies === "Clouds") {
-    document.getElementById("sky").src = "./images/cloud.png";
+    document.getElementById("weather__sky").src = "./images/cloud.png";
   }
 
   if (skies === "Clear") {
-    document.getElementById("sky").src = "./images/sun.png";
+    document.getElementById("weather__sky").src = "./images/sun.png";
   }
 };
 
-navigator.geolocation.getCurrentPosition(geoSuccess);
+navigator.geolocation.getCurrentPosition(geolocationSuccess);
 
 document.getElementById("fahrenheit").onclick = () => {
-  document.getElementById("temp").innerText = celciusToFahrenheit(temp);
+  document.getElementById("weather__temp").innerText = celciusToFahrenheit(
+    temp
+  );
 };
 
 document.getElementById("celcius").onclick = () => {
-  document.getElementById("temp").innerText = temp;
+  document.getElementById("weather__temp").innerText = temp;
 };
