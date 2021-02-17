@@ -31,11 +31,17 @@ const geolocationSuccess = async (position) => {
 navigator.geolocation.getCurrentPosition(geolocationSuccess);
 
 document.getElementById("fahrenheit").onclick = () => {
+  document.getElementById("celcius").checked = false;
   document.getElementById("weather__temp").innerText = celciusToFahrenheit(
     temp
   );
 };
 
 document.getElementById("celcius").onclick = () => {
+  document.getElementById("fahrenheit").checked = false;
   document.getElementById("weather__temp").innerText = temp;
 };
+
+// TODO
+// fixed bug where radio button isn't getting clicked
+// git

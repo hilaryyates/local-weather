@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.weather-container {
+  padding-top: 15rem;
+}
+
+#weather__temp {
+  font-size: 9rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#weather__sky-container {
+  position: relative;
+  /* border: 1px solid blue; */
+}
+
+#weather__sky {
+  max-width: 15rem;
+  position: absolute;
+  /* margin: 0 auto; */
+  left: 46%;
+  top: 46%;
+  transform: translateX(-46%, -46%);
+  padding-top: 5rem;
+}
+
+.weather {
+  position: relative;
+}
+
+.units {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.units__label {
+  font-size: 3.5em;
+  font-family: "Roboto", sans-serif;
+}
+
+/* TODO
+position units
+add sass
+style h1
+git
+add background
+git
+add animation on celcius farenheit change
+git
+*/

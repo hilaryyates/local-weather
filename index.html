@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="./script.js" async></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./output.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
@@ -11,23 +11,31 @@
     <title>Local Weather</title>
   </head>
   <body>
-    <div class="weather-container">
-      <div class="weather">
-        <div><p id="weather__temp"></p></div>
-        <div id="weather__sky-container"><img id="weather__sky" src="" /></div>
+    <main>
+      <h1>Local Weather</h1>
+      <div class="weather-container">
+        <div class="weather">
+          <section>
+            <div><p id="weather__temp"></p></div>
+          </section>
+          <section>
+            <div id="weather__sky-container">
+              <img id="weather__sky" src="" />
+            </div>
+          </section>
+        </div>
+        <section class="units">
+          <input type="radio" id="celcius" for="celcius" checked /><label
+            class="units__label"
+            >Celcius</label
+          >
+          <input type="radio" id="fahrenheit" /><label
+            class="units__label"
+            for="fahrenheit"
+            >Farenheit</label
+          >
+        </section>
       </div>
-      <div class="unit">
-        <input type="radio" id="celcius" name="units" checked /><label
-          for="Celcius"
-          class="unit__label"
-          >Celcius</label
-        >
-        <input type="radio" id="fahrenheit" name="units" /><label
-          for="Fahrenheit"
-          class="unit__label"
-          >Farenheit</label
-        >
-      </div>
-    </div>
+    </main>
   </body>
 </html>
