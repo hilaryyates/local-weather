@@ -6,10 +6,13 @@
 
 html {
   font-size: 62.5%;
+  color: #eee;
 }
 
 body {
   box-sizing: border-box;
+  background-image: url("./images/sky.jpg");
+  background-size: 100%;
 }
 
 .weather-container {
@@ -27,24 +30,37 @@ body {
 
 #weather__sky-container {
   position: relative;
-  /* border: 1px solid blue; */
 }
 
 #weather__sky {
   max-width: 15rem;
   position: absolute;
-  /* margin: 0 auto; */
   left: 46%;
   top: 46%;
   transform: translateX(-46%, -46%);
-  padding-top: 5rem;
+  padding-top: 12rem;
 }
 
-.unit {
-  text-align: center;
+.weather {
+  position: relative;
 }
 
-.unit__label {
-  font-size: 3rem;
+.units {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.units__label {
+  font-size: 3.5em;
   font-family: "Roboto", sans-serif;
 }
+
+/* TODO 
+add background to text container
+git
+style radios
+add animation on celcius farenheit change
+git
+*/
